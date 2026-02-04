@@ -1,0 +1,179 @@
+.about-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px 50px;
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.nav-buttons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: white;
+  color: black;
+}
+
+/* Title */
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 100px 0 50px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Places */
+.places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.place-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.place-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.place-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: 0.4s ease;
+}
+
+.place-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+
+.place-description {
+  flex: 1;
+}
+
+.place-description h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.place-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 80px;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-content p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Footer links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .place-row,
+  .place-row.reverse {
+    flex-direction: column;
+  }
+
+  .place-image img {
+    width: 100%;
+  }
+
+  .about-container {
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
