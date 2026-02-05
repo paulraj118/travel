@@ -6,12 +6,6 @@ function Home() {
   return (
     <div className="home-container">
 
-      {/* Background Video */}
-    <video className="bg-video" autoPlay muted loop>
-  <source src={bgVideo} type="video/mp4" />
-</video>
-
-
       {/* Top Navigation */}
       <div className="nav-buttons top">
         <Link to="/"><button>Home</button></Link>
